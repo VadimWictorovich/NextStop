@@ -11,7 +11,7 @@ import SwiftUI
 struct NextStopApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
