@@ -20,10 +20,11 @@ struct SignInView: View {
                 .ignoresSafeArea()
             VStack(spacing: 15) {
                 Spacer()
-                Text(viewModel.nameAppForLabel)
-                    .font(.system(size: 32, weight: .bold, design: .default))
-                    .foregroundColor(.white)
-                    .padding()
+                TextWithGradient(textLabel: viewModel.nameAppForLabel,
+                                 firstColorGradient: Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)),
+                                 secondColorGradient: Color(#colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)))
+                .padding()
+                   
                 Spacer()
 
                 ButtonSignIn(titleForButton: viewModel.titleButtonSignInWithApple,

@@ -28,7 +28,7 @@ final class SignInViewModel: SignInViewModelProtocol {
     }
     
     private let properties = Properties(nameImageForBackground: "SignInBackground2",
-                                        nameAppForLabel: "NextStop",
+                                        nameAppForLabel: "Next Stop",
                                         titleButtonSignInWithApple: "Войти с Apple",
                                         logoButtonSignInWithApple: Image(systemName: "apple.logo"),
                                         titleButtonSignInWithGoogle: "Войти с Google")
@@ -38,5 +38,4 @@ final class SignInViewModel: SignInViewModelProtocol {
     var titleButtonSignInWithApple: String { properties.titleButtonSignInWithApple }
     var logoButtonSignInWithApple: Image { properties.logoButtonSignInWithApple }
     var titleButtonSignInWithGoogle: String { properties.titleButtonSignInWithGoogle }
-    let logoButtonSignInWithGoogle: Image? = nil
 }
