@@ -12,6 +12,7 @@ struct ButtonSignIn: View {
     var heightButton: CGFloat = 50
     var widthButton: CGFloat = 300
     var titleForButton: String
+    var logoLabel: Image?
     var firstColorGradient: Color
     var secondColorGradient: Color
     var colorForTextButton: Color
@@ -23,7 +24,10 @@ struct ButtonSignIn: View {
         Button {
             print("tap")
         } label: {
-            Text(titleForButton)
+            HStack {
+                logoLabel
+                Text(titleForButton)
+            }
         }
         .frame(width: widthButton, height: heightButton)
         .foregroundColor(colorForTextButton)
@@ -34,6 +38,7 @@ struct ButtonSignIn: View {
 
 #Preview {
     ButtonSignIn(titleForButton: "Войти с Apple",
+                 logoLabel: Image(systemName: "apple.logo"),
                  firstColorGradient: .gray,
                  secondColorGradient: .black,
                  colorForTextButton: .white)
