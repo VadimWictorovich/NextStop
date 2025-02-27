@@ -21,8 +21,11 @@ struct SignInView: View {
             VStack(spacing: 15) {
                 Spacer()
                 TextWithGradient(textLabel: viewModel.nameAppForLabel,
-                                 firstColorGradient: Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)),
-                                 secondColorGradient: Color(#colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)))
+                                 firstColorGradient: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)),
+                                 secondColorGradient: Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)),
+                                 thirdColorGradient: Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)),
+                                 size: 45,
+                                 weight: .bold)
                 .padding()
                    
                 Spacer()

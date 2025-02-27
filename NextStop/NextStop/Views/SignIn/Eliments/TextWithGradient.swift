@@ -12,19 +12,21 @@ struct TextWithGradient: View {
     var textLabel: String
     var firstColorGradient: Color
     var secondColorGradient: Color
+    var thirdColorGradient: Color? = nil
+    var size: CGFloat
+    var weight: Font.Weight?
     var gradient: LinearGradient {
-        .init(colors: [firstColorGradient, secondColorGradient], startPoint: .top, endPoint: .bottom)
+        .init(colors: [firstColorGradient, secondColorGradient, thirdColorGradient == nil ? .clear : thirdColorGradient!], startPoint: .top, endPoint: .bottom)
     }
     
     var body: some View {
         Text(textLabel)
-            .font(.system(size: 45, weight: .bold, design: .default))
-            //.font(.largeTitle)
+            .font(.system(size: size, weight: weight, design: .default))
             .bold()
             .foregroundStyle(gradient)
     }
 }
 
 #Preview {
-    TextWithGradient(textLabel: "Hello", firstColorGradient: .red, secondColorGradient: .green)
+    TextWithGradient(textLabel: "Hello", firstColorGradient: .red, secondColorGradient: .green, size: 30)
 }
