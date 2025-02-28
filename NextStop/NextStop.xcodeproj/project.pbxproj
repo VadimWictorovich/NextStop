@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6CA0A7C92D69E11800141AEE /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA0A7C82D69E11800141AEE /* AlamofireImage */; };
 		6CA0A7CC2D69EAF400141AEE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA0A7CB2D69EAF400141AEE /* SwiftyJSON */; };
+		6CAC12432D721B5500155892 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAC12422D721B5500155892 /* GoogleMaps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			files = (
 				6CA0A7CC2D69EAF400141AEE /* SwiftyJSON in Frameworks */,
 				6CA0A7C92D69E11800141AEE /* AlamofireImage in Frameworks */,
+				6CAC12432D721B5500155892 /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,7 @@
 			packageProductDependencies = (
 				6CA0A7C82D69E11800141AEE /* AlamofireImage */,
 				6CA0A7CB2D69EAF400141AEE /* SwiftyJSON */,
+				6CAC12422D721B5500155892 /* GoogleMaps */,
 			);
 			productName = NextStop;
 			productReference = 6CA0A79E2D68BE4800141AEE /* NextStop.app */;
@@ -106,6 +109,7 @@
 			packageReferences = (
 				6CA0A7C72D69E11700141AEE /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				6CA0A7CA2D69EAF400141AEE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				6CAC12412D721B5500155892 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6CA0A79F2D68BE4800141AEE /* Products */;
@@ -273,6 +277,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +311,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +369,14 @@
 				minimumVersion = 5.0.2;
 			};
 		};
+		6CAC12412D721B5500155892 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -375,6 +389,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6CA0A7CA2D69EAF400141AEE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		6CAC12422D721B5500155892 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CAC12412D721B5500155892 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

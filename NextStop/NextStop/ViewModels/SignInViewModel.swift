@@ -38,4 +38,5 @@ final class SignInViewModel: SignInViewModelProtocol {
     var titleButtonSignInWithApple: String { properties.titleButtonSignInWithApple }
     var logoButtonSignInWithApple: Image { properties.logoButtonSignInWithApple }
     var titleButtonSignInWithGoogle: String { properties.titleButtonSignInWithGoogle }
+    
 }
