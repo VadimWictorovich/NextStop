@@ -51,7 +51,7 @@ struct MainView: View {
                         .cornerRadius(20)
                         .padding(.trailing, 15)
                 }.padding(.bottom, 30)
-                ViewWithMap()
+                GoogleMapView()
                     .frame(width: 320, height: 510)
                     .cornerRadius(30)
                     .padding()
