@@ -10,8 +10,16 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject private var viewModel = MainViewModel()
-    private let gradientBackground = LinearGradient(colors: [Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)), Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)),Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))], startPoint: .top, endPoint: .bottom)
+    //private let gradientBackground = LinearGradient(colors: [Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)), Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)),Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))], startPoint: .top, endPoint: .bottom)
+    private let gradientBackground = LinearGradient(colors: [Color(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1)), Color(#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)),Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))], startPoint: .top, endPoint: .bottom)
     private let gradientBackgroundButton = LinearGradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)),Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))], startPoint: .topTrailing, endPoint: .bottom)
+    private let menuView = Menu {
+        Button { print ("Tap button tap") } label: { Label(title: { Text("Список адресов") }, icon: { Image(systemName: "list.bullet.circle") } ) }
+        Button { print ("Tap button tap") } label: { Label(title: { Text("Настройки") }, icon: { Image(systemName: "gear") } ) }
+    } label: {
+        Label(title: { }, icon: { Image(systemName: "chevron.down") } )
+    }
+
     
     
     var body: some View {
@@ -28,7 +36,7 @@ struct MainView: View {
                                      size: 35,
                                      weight: .bold)
                     .padding(.leading, 25)
-                    Image(systemName: "chevron.down")
+                    menuView
                         .font(.system(size: 20, weight: .bold, design: .default))
                         .foregroundColor(Color(#colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1)))
                     Spacer()
@@ -63,7 +71,6 @@ struct MainView: View {
                     .cornerRadius(30)
                     .padding()
             }
-            
         }
     }
 }
