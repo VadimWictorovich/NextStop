@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0EBC892D78D2A90002B9F1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6C0EBC882D78D2A90002B9F1 /* RealmSwift */; };
 		6CA0A7C92D69E11800141AEE /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA0A7C82D69E11800141AEE /* AlamofireImage */; };
 		6CA0A7CC2D69EAF400141AEE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6CA0A7CB2D69EAF400141AEE /* SwiftyJSON */; };
 		6CAC12432D721B5500155892 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAC12422D721B5500155892 /* GoogleMaps */; };
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0EBC892D78D2A90002B9F1 /* RealmSwift in Frameworks */,
 				6CA0A7CC2D69EAF400141AEE /* SwiftyJSON in Frameworks */,
 				6CA0A7C92D69E11800141AEE /* AlamofireImage in Frameworks */,
 				6CAC12432D721B5500155892 /* GoogleMaps in Frameworks */,
@@ -77,6 +79,7 @@
 				6CA0A7C82D69E11800141AEE /* AlamofireImage */,
 				6CA0A7CB2D69EAF400141AEE /* SwiftyJSON */,
 				6CAC12422D721B5500155892 /* GoogleMaps */,
+				6C0EBC882D78D2A90002B9F1 /* RealmSwift */,
 			);
 			productName = NextStop;
 			productReference = 6CA0A79E2D68BE4800141AEE /* NextStop.app */;
@@ -110,6 +113,7 @@
 				6CA0A7C72D69E11700141AEE /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				6CA0A7CA2D69EAF400141AEE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				6CAC12412D721B5500155892 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				6C0EBC872D78D2A90002B9F1 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6CA0A79F2D68BE4800141AEE /* Products */;
@@ -353,6 +357,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6C0EBC872D78D2A90002B9F1 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 20.0.0;
+			};
+		};
 		6CA0A7C72D69E11700141AEE /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
@@ -380,6 +392,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6C0EBC882D78D2A90002B9F1 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C0EBC872D78D2A90002B9F1 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		6CA0A7C82D69E11800141AEE /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6CA0A7C72D69E11700141AEE /* XCRemoteSwiftPackageReference "AlamofireImage" */;
