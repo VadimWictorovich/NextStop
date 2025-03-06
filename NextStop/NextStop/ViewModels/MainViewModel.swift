@@ -7,10 +7,12 @@
 
 import SwiftUI
 import Combine
+import GoogleMaps
 
 
 final class MainViewModel: ObservableObject {
     
+    @Published var markers: [GMSMarker]  = []
     @Published var adresses: [String] = []
     @Published var isOn: Bool = true
     private var cancellables = Set<AnyCancellable>()
