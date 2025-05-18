@@ -45,14 +45,19 @@ struct MainView: View {
                     .cornerRadius(30)
                     .padding()
                 HStack {
+                    Spacer()
                     buttOpensListWithAdresses
+                        .font(.system(size: 30, weight: .bold, design: .default))
+                        .foregroundColor(.white)
                     Button { print ("Tap button tap") }
-                    label: { Text ("Some button").font(.system(size: 20, weight: .bold, design: .default)) }
-                        .frame(width: 230, height: 50)
-                        .foregroundColor( .black)
-                        .background(Color(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)))
-                        .cornerRadius(30)
-                        .padding()
+                        label: { Text ("Some button").font(.system(size: 20, weight: .bold, design: .default)) }
+                            .frame(width: 230, height: 50)
+                            .foregroundColor( .black)
+                            .background(Color(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)))
+                            .cornerRadius(30)
+                            .padding()
+                    Spacer()
+                    Spacer()
                 }
             }
         }
